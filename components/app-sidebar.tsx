@@ -25,7 +25,7 @@ const data = {
     email: "m@example.com",
     avatar: "/avatars/shadcn.jpg",
   },
-  navMain: [
+  navSecondary: [
     {
       title: "Dashboard",
       url: "/dashboard",
@@ -35,32 +35,32 @@ const data = {
       ),
     },
     {
-      title: "Lifecycle",
-      url: "#",
+      title: "Pedidos",
+      url: "/orders",
       icon: (
         <ListIcon
         />
       ),
     },
     {
-      title: "Analytics",
-      url: "#",
+      title: "Productos",
+      url: "/products",
       icon: (
         <ChartBarIcon
         />
       ),
     },
     {
-      title: "Projects",
-      url: "#",
+      title: "Clientes",
+      url: "/customers",
       icon: (
         <FolderIcon
         />
       ),
     },
     {
-      title: "Team",
-      url: "#",
+      title: "Proveedores",
+      url: "/suppliers",
       icon: (
         <UsersIcon
         />
@@ -124,7 +124,7 @@ const data = {
       ],
     },
   ],
-  navSecondary: [
+  navMain: [
     {
       title: "Settings",
       url: "#",
@@ -193,9 +193,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
-        <NavMain items={data.navMain} />
-        <NavDocuments items={data.documents} />
-        <NavSecondary items={data.navSecondary} className="mt-auto" />
+        <NavSecondary items={data.navSecondary}/>
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={data.user} />
