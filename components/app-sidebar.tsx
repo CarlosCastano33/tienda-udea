@@ -66,6 +66,14 @@ const data = {
         />
       ),
     },
+    {
+      title: "Users",
+      url: "/users",
+      icon: (
+        <CommandIcon
+        />
+      )
+    }
   ],
   navClouds: [
     {
